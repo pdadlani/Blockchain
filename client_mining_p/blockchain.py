@@ -142,14 +142,12 @@ def mine():
       'previous_hash': new_block['previous_hash']
     }
 
-    return jsonify(response), 200
-
   else:
     response = {
       'message': 'proof is invalid or already submitted'
     }
 
-    return jsonify(response), 200
+  return jsonify(response), 200
 
 
 @app.route('/chain', methods=['GET'])
